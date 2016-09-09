@@ -97,12 +97,10 @@
 		E2D4F9631D8247CA0029D65F /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				E2D4F9641D8247CA0029D65F /* AppDelegate.swift */,
-				E2D4F9661D8247CA0029D65F /* ViewController.swift */,
-				E2D4F9681D8247CA0029D65F /* Main.storyboard */,
-				E2D4F96B1D8247CA0029D65F /* Assets.xcassets */,
-				E2D4F96D1D8247CA0029D65F /* LaunchScreen.storyboard */,
-				E2D4F9701D8247CA0029D65F /* Info.plist */,
+				E2D4F9941D824A400029D65F /* Model Controllers */,
+				E2D4F9951D824A580029D65F /* Core */,
+				E2D4F9931D824A310029D65F /* View Controllers */,
+				E2D4F9921D824A250029D65F /* Model Objects */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -123,6 +121,40 @@
 				E2D4F9861D8247CA0029D65F /* Info.plist */,
 			);
 			path = WeatherUITests;
+			sourceTree = "<group>";
+		};
+		E2D4F9921D824A250029D65F /* Model Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Model Objects";
+			sourceTree = "<group>";
+		};
+		E2D4F9931D824A310029D65F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2D4F9661D8247CA0029D65F /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E2D4F9941D824A400029D65F /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		E2D4F9951D824A580029D65F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E2D4F9681D8247CA0029D65F /* Main.storyboard */,
+				E2D4F9641D8247CA0029D65F /* AppDelegate.swift */,
+				E2D4F96B1D8247CA0029D65F /* Assets.xcassets */,
+				E2D4F96D1D8247CA0029D65F /* LaunchScreen.storyboard */,
+				E2D4F9701D8247CA0029D65F /* Info.plist */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +516,7 @@
 				E2D4F98B1D8247CA0029D65F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2D4F98C1D8247CA0029D65F /* Build configuration list for PBXNativeTarget "WeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +525,7 @@
 				E2D4F98E1D8247CA0029D65F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2D4F98F1D8247CA0029D65F /* Build configuration list for PBXNativeTarget "WeatherUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +534,7 @@
 				E2D4F9911D8247CA0029D65F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
