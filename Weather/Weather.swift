@@ -11,12 +11,19 @@ import Foundation
 
 class Weather {
     
-    let main = ""
-    let desciption = ""
-    let iconString = ""
-    let temperatureK: Float?
-    let cityName = ""
-    let temperatureC: Float? {
+    static let weatherKey = "weather"
+    static let mainKey = "main"
+    static let descriptionKey = "desciption"
+    static let iconKey = "icon"
+    static let temperatureKey = "temp"
+    static let nameKey = "name"
+    
+    var main = ""
+    var desciption = ""
+    var iconString = ""
+    var temperatureK: Float?
+    var cityName = ""
+    var temperatureC: Float? {
         get {
             if let temperatureK = temperatureK {
                 return temperatureK - 273.15
@@ -26,9 +33,27 @@ class Weather {
         }
     }
     
-    
-    
-    
+    init(jsonDictionary: [String: AnyObject]) {
+        
+        if let arrayUsingWeatherKey = jsonDictionary[Weather.weatherKey] as? [[String: AnyObject]] {
+            if let main = arrayUsingWeatherKey[0][Weather.mainKey] as? String {
+                self.main = main
+            }
+            if let desciption = arrayUsingWeatherKey[0][Weather.descriptionKey] as? String {
+                self.desciption = desciption
+            }
+            if let iconString = arrayUsingWeatherKey[0][Weather.iconKey] as? String {
+                self.iconString = iconString
+            }
+        }
+        
+        if let main = jsonDictionary[Weather.mainKey] as? [String: AnyObject] {
+            if let temperature = main[Weather.temperatureKey] as? NSNumber {
+                self.temperatureK = Float(temperature)
+            }
+        }
+        if let cityName = jsonDictionary[Weather.nameKey] as? String {
+            self.cityName = cityName
+        }
+    }
 }
-
-//Using a sample endpoint, create an initWithJSON method. This will take one parameter, a dictionary, and create an initialized weather object. This will parse through the dictionary to set the Properties of a new Weather object.
