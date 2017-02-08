@@ -8,17 +8,32 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController {
+class WeatherViewController: UIViewController, UISearchBarDelegate {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let searchText = searchBar.text {
+            WeatherController.weatherBySearchCity(searchText, completion: { (result) in
+                guard let weatherResult = result else { return }
+                
+                DispatchQueue.main.async { () in
+                    self.cityNameLabel.text = weatherResult.cityName
+                    if let temperatureC = weatherResult.temperatureC {
+                        self.temperatureLabel.text = String(temperatureC) + "°C"
+                    } else {
+                        self.temperatureLabel.text = "No temperature available"
+                    }
+                    self.mainLabel.text = weatherResult.main
+                    self.descriptionLabel.text = weatherResult.description
+                }
+            })
+        }
+        
+        searchBar.resignFirstResponder()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
 }

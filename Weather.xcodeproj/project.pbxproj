@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E21DFAD81D84854D00117EDC /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21DFAD71D84854D00117EDC /* NetworkController.swift */; };
+		E21DFADA1D848A8F00117EDC /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21DFAD91D848A8F00117EDC /* WeatherController.swift */; };
 		E22CDA561D8251D40087655E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22CDA551D8251D40087655E /* Weather.swift */; };
 		E2D4F9651D8247CA0029D65F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D4F9641D8247CA0029D65F /* AppDelegate.swift */; };
 		E2D4F96A1D8247CA0029D65F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D4F9681D8247CA0029D65F /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E21DFAD71D84854D00117EDC /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		E21DFAD91D848A8F00117EDC /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
 		E22CDA551D8251D40087655E /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		E2D4F9611D8247CA0029D65F /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D4F9641D8247CA0029D65F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 		E2D4F9941D824A400029D65F /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E21DFAD71D84854D00117EDC /* NetworkController.swift */,
+				E21DFAD91D848A8F00117EDC /* WeatherController.swift */,
 			);
 			name = "Model Controllers";
 			sourceTree = "<group>";
@@ -228,13 +234,16 @@
 				TargetAttributes = {
 					E2D4F9601D8247CA0029D65F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 					};
 					E2D4F9741D8247CA0029D65F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = E2D4F9601D8247CA0029D65F;
 					};
 					E2D4F97F1D8247CA0029D65F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = E2D4F9601D8247CA0029D65F;
 					};
 				};
@@ -291,9 +300,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21DFAD81D84854D00117EDC /* NetworkController.swift in Sources */,
 				E2D4F9971D824D480029D65F /* WeatherViewController.swift in Sources */,
 				E22CDA561D8251D40087655E /* Weather.swift in Sources */,
 				E2D4F9651D8247CA0029D65F /* AppDelegate.swift in Sources */,
+				E21DFADA1D848A8F00117EDC /* WeatherController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +452,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbthompson.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -452,6 +464,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbthompson.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -463,6 +476,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbthompson.WeatherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather.app/Weather";
 			};
 			name = Debug;
@@ -475,6 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbthompson.WeatherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather.app/Weather";
 			};
 			name = Release;
@@ -486,6 +501,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbthompson.WeatherUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Weather;
 			};
 			name = Debug;
@@ -497,6 +513,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbthompson.WeatherUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Weather;
 			};
 			name = Release;

@@ -19,7 +19,7 @@ class Weather {
     static let nameKey = "name"
     
     var main = ""
-    var desciption = ""
+    var description = ""
     var iconString = ""
     var temperatureK: Float?
     var cityName = ""
@@ -36,11 +36,14 @@ class Weather {
     init(jsonDictionary: [String: AnyObject]) {
         
         if let arrayUsingWeatherKey = jsonDictionary[Weather.weatherKey] as? [[String: AnyObject]] {
+//            self.main = arrayUsingWeatherKey[0][Weather.mainKey] as? String ?? "" is another option
+            
             if let main = arrayUsingWeatherKey[0][Weather.mainKey] as? String {
                 self.main = main
             }
-            if let desciption = arrayUsingWeatherKey[0][Weather.descriptionKey] as? String {
-                self.desciption = desciption
+            // 
+            if let description = arrayUsingWeatherKey[0][Weather.descriptionKey] as? String {
+                self.description = description
             }
             if let iconString = arrayUsingWeatherKey[0][Weather.iconKey] as? String {
                 self.iconString = iconString
